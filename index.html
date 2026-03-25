@@ -483,11 +483,11 @@
                     <div class="recruit-card">
                         <h3>지원 방법</h3>
                         <ul>
-                            <li>이메일로 간단한 자기소개 및 관심 분야 전송</li>
+                            <li>아래 양식으로 간단한 자기소개 및 관심 분야 전송</li>
                             <li>면담 후 연구실 합류 결정</li>
                             <li>수시 모집 (상시 지원 가능)</li>
                         </ul>
-                        <a href="mailto:hkim@swu.ac.kr" class="btn btn-primary btn-full">지원 이메일 보내기</a>
+                        <button type="button" class="btn btn-primary btn-full" id="openFormBtn">지원하기</button>
                     </div>
                 </div>
             </div>
@@ -520,6 +520,49 @@
             </div>
         </div>
     </section>
+
+    <!-- Apply Modal -->
+    <div class="modal-overlay" id="applyModal">
+        <div class="modal">
+            <button class="modal-close" id="closeFormBtn" aria-label="닫기">&times;</button>
+            <h3>연구실 지원하기</h3>
+            <p class="modal-desc">간단한 정보를 입력해주시면 교수님 이메일로 전달됩니다.</p>
+            <form id="applyForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-group">
+                    <label for="name">이름 <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required placeholder="홍길동">
+                </div>
+                <div class="form-group">
+                    <label for="email">이메일 <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="example@swu.ac.kr">
+                </div>
+                <div class="form-group">
+                    <label for="major">학과 / 학년</label>
+                    <input type="text" id="major" name="major" placeholder="정보보호학과 3학년">
+                </div>
+                <div class="form-group">
+                    <label for="interest">관심 연구 분야 <span class="required">*</span></label>
+                    <select id="interest" name="interest" required>
+                        <option value="" disabled selected>선택해주세요</option>
+                        <option value="디지털 트윈 & 디지털 페르소나">디지털 트윈 &amp; 디지털 페르소나</option>
+                        <option value="블록체인 보안">블록체인 보안</option>
+                        <option value="Android & IoT 보안">Android &amp; IoT 보안</option>
+                        <option value="클라우드 보안">클라우드 보안</option>
+                        <option value="사이버 보안 게미피케이션">사이버 보안 게미피케이션</option>
+                        <option value="네트워크 보안">네트워크 보안</option>
+                        <option value="기타">기타</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">자기소개 및 지원 동기 <span class="required">*</span></label>
+                    <textarea id="message" name="message" rows="4" required placeholder="간단한 자기소개와 연구실에 지원하는 이유를 적어주세요."></textarea>
+                </div>
+                <input type="text" name="_gotcha" style="display:none">
+                <button type="submit" class="btn btn-primary btn-full" id="submitBtn">지원서 보내기</button>
+            </form>
+            <div class="form-result" id="formResult"></div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
