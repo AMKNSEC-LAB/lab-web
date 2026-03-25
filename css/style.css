@@ -579,6 +579,201 @@ img {
 }
 
 /* ===========================
+   Projects Section
+   =========================== */
+.project-section-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 24px;
+    margin-top: 48px;
+    padding-left: 16px;
+    border-left: 3px solid var(--primary);
+}
+
+.project-section-title:first-of-type {
+    margin-top: 0;
+}
+
+.marker-active {
+    background: var(--accent) !important;
+    box-shadow: 0 0 0 3px rgba(0, 206, 201, 0.3), 0 0 12px rgba(0, 206, 201, 0.4) !important;
+    animation: markerPulse 2s infinite;
+}
+
+@keyframes markerPulse {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(0, 206, 201, 0.3); }
+    50% { box-shadow: 0 0 0 6px rgba(0, 206, 201, 0.15), 0 0 16px rgba(0, 206, 201, 0.3); }
+}
+
+.card-ongoing {
+    border-color: rgba(0, 206, 201, 0.2) !important;
+    background: linear-gradient(135deg, var(--dark-2) 0%, rgba(0, 206, 201, 0.05) 100%) !important;
+}
+
+.card-ongoing:hover {
+    border-color: rgba(0, 206, 201, 0.4) !important;
+}
+
+.cat-ongoing {
+    background: rgba(0, 206, 201, 0.2);
+    color: var(--accent);
+}
+
+.professor-career {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+    margin-top: 12px;
+}
+
+.career-tag {
+    padding: 5px 14px;
+    background: rgba(108, 92, 231, 0.12);
+    border: 1px solid rgba(108, 92, 231, 0.25);
+    border-radius: 100px;
+    font-size: 0.82rem;
+    color: var(--primary-light);
+    font-weight: 500;
+}
+
+.project-timeline {
+    position: relative;
+    padding-left: 40px;
+}
+
+.project-timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary), var(--accent), var(--primary-light));
+    opacity: 0.4;
+}
+
+.project-item {
+    position: relative;
+    margin-bottom: 32px;
+}
+
+.project-item:last-child {
+    margin-bottom: 0;
+}
+
+.project-marker {
+    position: absolute;
+    left: -33px;
+    top: 28px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--primary);
+    border: 3px solid var(--dark);
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.3);
+    z-index: 1;
+}
+
+.project-item:hover .project-marker {
+    background: var(--accent);
+    box-shadow: 0 0 0 3px rgba(0, 206, 201, 0.3);
+}
+
+.project-card {
+    background: var(--dark-2);
+    border: 1px solid rgba(108, 92, 231, 0.1);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    border-color: rgba(108, 92, 231, 0.3);
+    transform: translateX(6px);
+    box-shadow: var(--shadow-md);
+}
+
+.project-category {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+.cat-research {
+    background: rgba(108, 92, 231, 0.2);
+    color: var(--primary-light);
+}
+
+.cat-game {
+    background: rgba(0, 206, 201, 0.2);
+    color: var(--accent);
+}
+
+.cat-global {
+    background: rgba(253, 203, 110, 0.2);
+    color: #fdcb6e;
+}
+
+.project-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 12px;
+}
+
+.project-card > p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.project-card strong {
+    color: var(--white);
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-tags li {
+    padding: 4px 12px;
+    background: rgba(108, 92, 231, 0.1);
+    border: 1px solid rgba(108, 92, 231, 0.2);
+    border-radius: 100px;
+    font-size: 0.8rem;
+    color: var(--primary-light);
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .project-timeline {
+        padding-left: 30px;
+    }
+
+    .project-timeline::before {
+        left: 10px;
+    }
+
+    .project-marker {
+        left: -28px;
+    }
+
+    .project-card {
+        padding: 24px;
+    }
+}
+
+/* ===========================
    Publications Section
    =========================== */
 .pub-grid {

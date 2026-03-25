@@ -65,7 +65,7 @@ function initParticles() {
 function initScrollAnimations() {
     const animatedElements = document.querySelectorAll(
         '.research-card, .pub-card, .stat-card, .contact-card, ' +
-        '.professor-card, .recruit-card, .why-item, .section-header'
+        '.professor-card, .recruit-card, .why-item, .section-header, .project-item'
     );
 
     animatedElements.forEach(el => el.classList.add('fade-in'));
