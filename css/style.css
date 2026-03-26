@@ -261,6 +261,7 @@ img {
     z-index: 1;
     text-align: center;
     padding: 0 24px;
+    padding-top: 100px;
     max-width: 900px;
 }
 
