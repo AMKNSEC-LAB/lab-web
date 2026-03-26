@@ -266,11 +266,11 @@ img {
 }
 
 .hero-mascot {
-    width: 180px;
-    height: 180px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 0 auto 32px;
+    margin: 0 auto 24px;
     border: 3px solid rgba(108, 92, 231, 0.3);
     box-shadow: 0 0 40px rgba(108, 92, 231, 0.2);
     animation: mascotGlow 3s infinite ease-in-out;
@@ -378,22 +378,30 @@ img {
 }
 
 .section-hodu {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    margin: 0 auto 16px;
-    display: block;
-    filter: drop-shadow(0 4px 12px rgba(108, 92, 231, 0.3));
+    display: none;
+}
+
+.title-hodu {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    vertical-align: middle;
+    margin-left: 8px;
+    border: 2px solid rgba(108, 92, 231, 0.3);
+    box-shadow: 0 2px 8px rgba(108, 92, 231, 0.2);
     transition: var(--transition);
 }
 
-.section-hodu:hover {
-    transform: scale(1.1) rotate(5deg);
+.title-hodu:hover {
+    transform: scale(1.15) rotate(5deg);
+    border-color: var(--accent);
 }
 
 .modal-hodu {
-    width: 64px;
-    height: 64px;
+    width: 48px;
+    height: 48px;
     object-fit: contain;
     margin: 0 auto 12px;
     display: block;
