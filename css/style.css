@@ -383,8 +383,8 @@ img {
 
 .title-hodu {
     display: inline-block;
-    width: 160px;
-    height: 160px;
+    width: 96px;
+    height: 96px;
     border-radius: 50%;
     object-fit: cover;
     vertical-align: middle;
