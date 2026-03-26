@@ -323,16 +323,9 @@ img {
     color: var(--white);
 }
 
-.hero-actions {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
 .hero-scroll {
     position: absolute;
-    bottom: 40px;
+    bottom: 12px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -345,7 +338,13 @@ img {
     text-transform: uppercase;
 }
 
-.scroll-line {
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}.scroll-line {
     width: 1px;
     height: 40px;
     background: linear-gradient(to bottom, var(--primary-light), transparent);
